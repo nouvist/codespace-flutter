@@ -21,6 +21,7 @@ jobs:
       - name: Get name
         id: get_name
         run: |
+          chmod +x ./name.sh
           value=$(./name.sh)
           echo "value=$value" >> $GITHUB_OUTPUT
 
