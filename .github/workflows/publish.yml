@@ -18,7 +18,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ github.token }}
 
-      - name: Get name
+      - name: Get name for Docker image
         id: get_name
         run: |
           chmod +x ./name.sh
@@ -30,4 +30,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ steps.get_name.outputs.value }}
+          tags: ghcr.io/${{ github.actor }}/${{ steps.get_name.outputs.value }}
