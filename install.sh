@@ -3,7 +3,7 @@
 apt-get update
 apt-get install -y sudo jq curl git tar xz-utils libarchive-tools \
   openjdk-17-jdk
-curl -s https://install.zerotier.com | bash
+curl -fsSL https://pkgs.netbird.io/install.sh | sh
 
 useradd -m -s /bin/bash -G sudo vscode
 echo "vscode  ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/vscode
